@@ -185,6 +185,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="empleado.cs" />
     <Compile Include="frm_profesion.aspx.cs">
       <DependentUpon>frm_profesion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
