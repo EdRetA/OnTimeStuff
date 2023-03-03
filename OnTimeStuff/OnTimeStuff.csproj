@@ -185,7 +185,8 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="empleado.cs" />
+    <Compile Include="profesion.cs" />
+    <Compile Include="trabajador.cs" />
     <Compile Include="frm_profesion.aspx.cs">
       <DependentUpon>frm_profesion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -228,6 +229,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

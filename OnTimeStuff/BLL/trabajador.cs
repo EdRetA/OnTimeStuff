@@ -5,7 +5,7 @@ using System.Web;
 
 namespace OnTimeStuff
 {
-    public class empleado
+    public class trabajador
     {
         public int Id { get; set; }
         public String Nombre { get; set; }
@@ -15,19 +15,8 @@ namespace OnTimeStuff
         public int Edificio { get; set; }
         public int Puesto { get; set; }
 
-        public empleado(){
-}
-
-        //public empleado (int id, string nombre, string apellido1, string apellido2, DateTime fecha, int edificio)
-        //{
-        //    Id = id;
-        //    Nombre = nombre;
-        //    Apellido1 = apellido1;
-        //    Apellido2 = apellido2;
-        //    Fecha = fecha;
-        //    Edificio = edificio;
-        //}
-        
+        public trabajador(){
+        }        
         
     }
     

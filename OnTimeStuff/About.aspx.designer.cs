@@ -11,7 +11,7 @@ namespace OnTimeStuff
 {
 
 
-    public partial class About2
+    public partial class About
     {
     }
 }
