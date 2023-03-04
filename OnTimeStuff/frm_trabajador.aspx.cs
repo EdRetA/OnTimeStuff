@@ -26,7 +26,7 @@ namespace OnTimeStuff
             // catch (SqlException)
             catch (SqlException ex)
             {
-                //mostrarmensaje("Ya existe una cédula igual");
+                mostrarmensaje("Ya existe una cédula igual");
             }
             
 

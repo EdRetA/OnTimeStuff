@@ -15,13 +15,40 @@ namespace OnTimeStuff
     {
 
         /// <summary>
-        /// GridView1 control.
+        /// lblBuscar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label lblBuscar;
+
+        /// <summary>
+        /// txtId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtId;
+
+        /// <summary>
+        /// cmdBuscar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button cmdBuscar;
+
+        /// <summary>
+        /// gvTrabajadores control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvTrabajadores;
 
         /// <summary>
         /// lblCedula control.
@@ -33,13 +60,13 @@ namespace OnTimeStuff
         protected global::System.Web.UI.WebControls.Label lblCedula;
 
         /// <summary>
-        /// txtCedula control.
+        /// lbtCedula control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCedula;
+        protected global::System.Web.UI.WebControls.Label lbtCedula;
 
         /// <summary>
         /// lblNombre control.
@@ -51,13 +78,13 @@ namespace OnTimeStuff
         protected global::System.Web.UI.WebControls.Label lblNombre;
 
         /// <summary>
-        /// txtNombre control.
+        /// lbtNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.Label lbtNombre;
 
         /// <summary>
         /// lblApellido1 control.
@@ -69,13 +96,13 @@ namespace OnTimeStuff
         protected global::System.Web.UI.WebControls.Label lblApellido1;
 
         /// <summary>
-        /// txtApellido1 control.
+        /// lbtApellido1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellido1;
+        protected global::System.Web.UI.WebControls.Label lbtApellido1;
 
         /// <summary>
         /// lblApellido2 control.
@@ -87,13 +114,13 @@ namespace OnTimeStuff
         protected global::System.Web.UI.WebControls.Label lblApellido2;
 
         /// <summary>
-        /// txtApellido2 control.
+        /// lbtApellido2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellido2;
+        protected global::System.Web.UI.WebControls.Label lbtApellido2;
 
         /// <summary>
         /// lblCalendario control.
@@ -105,22 +132,67 @@ namespace OnTimeStuff
         protected global::System.Web.UI.WebControls.Label lblCalendario;
 
         /// <summary>
-        /// Calendario control.
+        /// lbtCalendario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendario;
+        protected global::System.Web.UI.WebControls.Label lbtCalendario;
 
         /// <summary>
-        /// dsTrabajadores control.
+        /// lblProfesion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource dsTrabajadores;
+        protected global::System.Web.UI.WebControls.Label lblProfesion;
+
+        /// <summary>
+        /// lbtProfesion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbtProfesion;
+
+        /// <summary>
+        /// lblEdificio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEdificio;
+
+        /// <summary>
+        /// lbtEdificio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbtEdificio;
+
+        /// <summary>
+        /// cmdEntrada control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button cmdEntrada;
+
+        /// <summary>
+        /// dsTrabajador control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsTrabajador;
 
         /// <summary>
         /// dsProfesiones control.
@@ -130,5 +202,32 @@ namespace OnTimeStuff
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource dsProfesiones;
+
+        /// <summary>
+        /// dsPuestos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsPuestos;
+
+        /// <summary>
+        /// dsEdificios control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsEdificios;
+
+        /// <summary>
+        /// dsMarca control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsMarca;
     }
 }
