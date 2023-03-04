@@ -58,22 +58,22 @@ namespace OnTimeStuff
 
         public void insertar()
         {
-            trabajador nuevotrabajador = new trabajador();
-            nuevotrabajador.Id = int.Parse(txtCedula.Text);
-            nuevotrabajador.Nombre = txtNombre.Text;
-            nuevotrabajador.Apellido1 = txtApellido1.Text;
-            nuevotrabajador.Apellido2 = txtApellido2.Text;
-            nuevotrabajador.Fecha = Calendar1.SelectedDate;
-            nuevotrabajador.Edificio = int.Parse(ddEdificio.SelectedValue);
-            nuevotrabajador.Puesto = int.Parse(ddprofesion.SelectedValue);
+            empleado nuevoEmpleado = new empleado();
+            nuevoEmpleado.Id = int.Parse(txtCedula.Text);
+            nuevoEmpleado.Nombre = txtNombre.Text;
+            nuevoEmpleado.Apellido1 = txtApellido1.Text;
+            nuevoEmpleado.Apellido2 = txtApellido2.Text;
+            nuevoEmpleado.Fecha = Calendar1.SelectedDate;
+            nuevoEmpleado.Edificio = int.Parse(ddEdificio.SelectedValue);
+            nuevoEmpleado.Puesto = int.Parse(ddprofesion.SelectedValue);
 
-            SqlDataSource1.InsertParameters[0].DefaultValue = nuevotrabajador.Id.ToString();
-            SqlDataSource1.InsertParameters[1].DefaultValue = nuevotrabajador.Nombre;
-            SqlDataSource1.InsertParameters[2].DefaultValue = nuevotrabajador.Apellido1;
-            SqlDataSource1.InsertParameters[3].DefaultValue = nuevotrabajador.Apellido2;
-            SqlDataSource1.InsertParameters[4].DefaultValue = nuevotrabajador.Fecha.ToString();
-            SqlDataSource1.InsertParameters[5].DefaultValue = nuevotrabajador.Edificio.ToString();
-            SqlDataSource1.InsertParameters[6].DefaultValue = nuevotrabajador.Puesto.ToString();
+            SqlDataSource1.InsertParameters[0].DefaultValue = nuevoEmpleado.Id.ToString();
+            SqlDataSource1.InsertParameters[1].DefaultValue = nuevoEmpleado.Nombre;
+            SqlDataSource1.InsertParameters[2].DefaultValue = nuevoEmpleado.Apellido1;
+            SqlDataSource1.InsertParameters[3].DefaultValue = nuevoEmpleado.Apellido2;
+            SqlDataSource1.InsertParameters[4].DefaultValue = nuevoEmpleado.Fecha.ToString();
+            SqlDataSource1.InsertParameters[5].DefaultValue = nuevoEmpleado.Edificio.ToString();
+            SqlDataSource1.InsertParameters[6].DefaultValue = nuevoEmpleado.Puesto.ToString();
             SqlDataSource1.Insert();
 
         }

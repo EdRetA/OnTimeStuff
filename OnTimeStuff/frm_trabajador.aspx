@@ -45,7 +45,7 @@
     <asp:Button ID="cmdLimpiar" runat="server" OnClick="Button2_Click" Text="Limpiar" />
     <br />
     <br />
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pruebasConnectionString %>" DeleteCommand="DELETE FROM [trabajadors] WHERE [id] = @id" InsertCommand="INSERT INTO [trabajadors] ([id], [Nombre], [Apellido1], [Apellido2], [FechaIngreso], [pk_edificio], [pk_salario]) VALUES (@id, @Nombre, @Apellido1, @Apellido2, @FechaIngreso, @pk_edificio, @pk_salario)" SelectCommand="SELECT * FROM [trabajadors]" UpdateCommand="UPDATE [trabajadors] SET [Nombre] = @Nombre, [Apellido1] = @Apellido1, [Apellido2] = @Apellido2, [FechaIngreso] = @FechaIngreso, [pk_edificio] = @pk_edificio, [pk_salario] = @pk_salario WHERE [id] = @id">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pruebasConnectionString %>" DeleteCommand="DELETE FROM [empleados] WHERE [id] = @id" InsertCommand="INSERT INTO [empleados] ([id], [Nombre], [Apellido1], [Apellido2], [FechaIngreso], [pk_edificio], [pk_salario]) VALUES (@id, @Nombre, @Apellido1, @Apellido2, @FechaIngreso, @pk_edificio, @pk_salario)" SelectCommand="SELECT * FROM [empleados]" UpdateCommand="UPDATE [empleados] SET [Nombre] = @Nombre, [Apellido1] = @Apellido1, [Apellido2] = @Apellido2, [FechaIngreso] = @FechaIngreso, [pk_edificio] = @pk_edificio, [pk_salario] = @pk_salario WHERE [id] = @id">
         <DeleteParameters>
             <asp:Parameter Name="id" Type="Int32" />
         </DeleteParameters>
