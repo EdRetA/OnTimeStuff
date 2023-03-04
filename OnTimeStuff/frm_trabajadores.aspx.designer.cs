@@ -11,8 +11,35 @@ namespace OnTimeStuff
 {
 
 
-    public partial class frm_profesion
+    public partial class frm_trabajadores
     {
+
+        /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
+
+        /// <summary>
+        /// lblCedula control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCedula;
+
+        /// <summary>
+        /// txtCedula control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCedula;
 
         /// <summary>
         /// lblNombre control.
@@ -33,57 +60,75 @@ namespace OnTimeStuff
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
 
         /// <summary>
-        /// lblsalario control.
+        /// lblApellido1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsalario;
+        protected global::System.Web.UI.WebControls.Label lblApellido1;
 
         /// <summary>
-        /// ddsalario control.
+        /// txtApellido1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddsalario;
+        protected global::System.Web.UI.WebControls.TextBox txtApellido1;
 
         /// <summary>
-        /// cmdAgregar control.
+        /// lblApellido2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button cmdAgregar;
+        protected global::System.Web.UI.WebControls.Label lblApellido2;
 
         /// <summary>
-        /// cmdLimpiar control.
+        /// txtApellido2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button cmdLimpiar;
+        protected global::System.Web.UI.WebControls.TextBox txtApellido2;
 
         /// <summary>
-        /// SqlDataSource1 control.
+        /// lblCalendario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.Label lblCalendario;
 
         /// <summary>
-        /// SqlDataSource2 control.
+        /// Calendario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        protected global::System.Web.UI.WebControls.Calendar Calendario;
+
+        /// <summary>
+        /// dsTrabajadores control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsTrabajadores;
+
+        /// <summary>
+        /// dsProfesiones control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsProfesiones;
     }
 }

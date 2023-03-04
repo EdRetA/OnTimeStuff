@@ -23,9 +23,10 @@ namespace OnTimeStuff
                 limpiar();
                 mostrarmensaje("Usuario Ingresado");
             }
-            catch (SqlException)
+            // catch (SqlException)
+            catch (SqlException ex)
             {
-                mostrarmensaje("Ya existe una cédula igual");
+                //mostrarmensaje("Ya existe una cédula igual");
             }
             
 
@@ -67,14 +68,15 @@ namespace OnTimeStuff
             nuevoEmpleado.Edificio = int.Parse(ddEdificio.SelectedValue);
             nuevoEmpleado.Puesto = int.Parse(ddprofesion.SelectedValue);
 
-            SqlDataSource1.InsertParameters[0].DefaultValue = nuevoEmpleado.Id.ToString();
-            SqlDataSource1.InsertParameters[1].DefaultValue = nuevoEmpleado.Nombre;
-            SqlDataSource1.InsertParameters[2].DefaultValue = nuevoEmpleado.Apellido1;
-            SqlDataSource1.InsertParameters[3].DefaultValue = nuevoEmpleado.Apellido2;
-            SqlDataSource1.InsertParameters[4].DefaultValue = nuevoEmpleado.Fecha.ToString();
-            SqlDataSource1.InsertParameters[5].DefaultValue = nuevoEmpleado.Edificio.ToString();
-            SqlDataSource1.InsertParameters[6].DefaultValue = nuevoEmpleado.Puesto.ToString();
-            SqlDataSource1.Insert();
+            
+            dsTrabajador.InsertParameters[0].DefaultValue = nuevoEmpleado.Id.ToString();
+            dsTrabajador.InsertParameters[1].DefaultValue = nuevoEmpleado.Nombre;
+            dsTrabajador.InsertParameters[2].DefaultValue = nuevoEmpleado.Apellido1;
+            dsTrabajador.InsertParameters[3].DefaultValue = nuevoEmpleado.Apellido2;
+            dsTrabajador.InsertParameters[4].DefaultValue = nuevoEmpleado.Fecha.ToString();
+            dsTrabajador.InsertParameters[5].DefaultValue = nuevoEmpleado.Edificio.ToString();
+            dsTrabajador.InsertParameters[6].DefaultValue = nuevoEmpleado.Puesto.ToString();
+            dsTrabajador.Insert();
 
         }
 
