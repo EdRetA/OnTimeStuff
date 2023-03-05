@@ -11,7 +11,16 @@ namespace OnTimeStuff
 {
 
 
-    public partial class About2
+    public partial class About
     {
+
+        /// <summary>
+        /// img_uned control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image img_uned;
     }
 }

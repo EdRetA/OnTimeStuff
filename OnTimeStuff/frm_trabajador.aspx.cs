@@ -19,6 +19,15 @@ namespace OnTimeStuff
         {
             try
             {
+                if (string.IsNullOrEmpty(txtCedula.Text)|
+                        string.IsNullOrEmpty(txtNombre.Text)|
+                        string.IsNullOrEmpty(txtApellido1.Text)|
+                        string.IsNullOrEmpty(txtApellido2.Text))
+                {
+                    throw new Exception("Ingrese todos los datos para continuar");
+                }
+
+
                 insertar();
                 limpiar();
                 mostrarmensaje("Usuario Ingresado");
@@ -28,7 +37,11 @@ namespace OnTimeStuff
             {
                 mostrarmensaje("Ya existe una cédula igual");
             }
-            
+            catch (Exception ex)
+            {
+                mostrarmensaje(ex.Message);
+            }
+
 
         }
 
@@ -84,6 +97,7 @@ namespace OnTimeStuff
         {
             limpiar();
         }
+                
     }
     
 }

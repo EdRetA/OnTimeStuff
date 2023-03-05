@@ -1,44 +1,71 @@
-﻿<%@ Page Title="Ingresar Nuevo Trabajador"Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="frm_trabajador.aspx.cs" Inherits="OnTimeStuff.frm_trabajador" %>
+﻿<%@ Page Title="Ingresar Nuevo Trabajador" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="frm_trabajador.aspx.cs" Inherits="OnTimeStuff.frm_trabajador" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
-    <p><asp:Label ID="lblCedula" runat="server" Text="Cédula: "></asp:Label>
-       <asp:TextBox ID="txtCedula" runat="server"></asp:TextBox>
+    <p>
+        <asp:Label ID="lblCedula" runat="server" Text="Cédula: "></asp:Label>
+        <asp:TextBox ID="txtCedula" runat="server" minlength="9" MaxLength="9"></asp:TextBox>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator1"
+            ControlToValidate="txtCedula" runat="server"
+            ErrorMessage="Sólo ingrese números"
+            ValidationExpression="\d+" Font-Bold="True" Font-Size="Small" ForeColor="Red"></asp:RegularExpressionValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator5"
+            ControlToValidate="txtCedula" runat="server"
+            ErrorMessage="Ingrese 9 dígitos"
+            ValidationExpression="\d{9}" Font-Bold="True" Font-Size="Small" ForeColor="Red"></asp:RegularExpressionValidator>
     </p>
-    <p><asp:Label ID="lblNombre" runat="server" Text="Nombre: "></asp:Label>
-       <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
+    <p>
+        <asp:Label ID="lblNombre" runat="server" Text="Nombre: "></asp:Label>
+        <asp:TextBox ID="txtNombre" runat="server" minlength="3" MaxLength="15"></asp:TextBox>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator2"
+            ControlToValidate="txtNombre" runat="server"
+            ErrorMessage="Sólo ingrese letras"
+            ValidationExpression="^[a-zA-Z]+$" Font-Bold="True" Font-Size="Small" ForeColor="Red"></asp:RegularExpressionValidator>
     </p>
-     <p><asp:Label ID="lblApellido1" runat="server" Text="Primer Apellido: "></asp:Label>
-       <asp:TextBox ID="txtApellido1" runat="server"></asp:TextBox>
+    <p>
+        <asp:Label ID="lblApellido1" runat="server" Text="Primer Apellido: "></asp:Label>
+        <asp:TextBox ID="txtApellido1" runat="server" minlength="3" MaxLength="15"></asp:TextBox>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator3"
+            ControlToValidate="txtApellido1" runat="server"
+            ErrorMessage="Sólo ingrese letras"
+            ValidationExpression="^[a-zA-Z]+$" Font-Bold="True" Font-Size="Small" ForeColor="Red"></asp:RegularExpressionValidator>
     </p>
-     <p><asp:Label ID="lblApellido2" runat="server" Text="Segundo Apellido: "></asp:Label>
-       <asp:TextBox ID="txtApellido2" runat="server"></asp:TextBox>
+    <p>
+        <asp:Label ID="lblApellido2" runat="server" Text="Segundo Apellido: "></asp:Label>
+        <asp:TextBox ID="txtApellido2" runat="server" minlength="3" MaxLength="15"></asp:TextBox>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator4"
+            ControlToValidate="txtApellido2" runat="server"
+            ErrorMessage="Sólo ingrese letras"
+            ValidationExpression="^[a-zA-Z]+$" Font-Bold="True" Font-Size="Small" ForeColor="Red"></asp:RegularExpressionValidator>
     </p>
-     <p><asp:Label ID="lbl_Fechaingreso" runat="server" Text="Fecha de Ingreso: "></asp:Label>
+    <p>
+        <asp:Label ID="lbl_Fechaingreso" runat="server" Text="Fecha de Ingreso: "></asp:Label>
 
-         <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px" OnClientClick="return false;">
-             <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
-             <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
-             <OtherMonthDayStyle ForeColor="#999999" />
-             <SelectedDayStyle BackColor="#333399" ForeColor="White" />
-             <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
-             <TodayDayStyle BackColor="#CCCCCC" />
-         </asp:Calendar>
+        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px" OnClientClick="return false;">
+            <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
+            <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
+            <OtherMonthDayStyle ForeColor="#999999" />
+            <SelectedDayStyle BackColor="#333399" ForeColor="White" />
+            <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
+            <TodayDayStyle BackColor="#CCCCCC" />
+        </asp:Calendar>
 
     </p>
-    
-     <p><asp:Label ID="lblProfesion" runat="server" Text="Profesión: "></asp:Label>
-       
-         <asp:DropDownList ID="ddprofesion" runat="server" DataSourceID="dsProfesiones" DataTextField="nombre" DataValueField="id">
-         </asp:DropDownList>
-       
+
+    <p>
+        <asp:Label ID="lblProfesion" runat="server" Text="Profesión: "></asp:Label>
+
+        <asp:DropDownList ID="ddprofesion" runat="server" DataSourceID="dsProfesiones" DataTextField="nombre" DataValueField="id">
+        </asp:DropDownList>
+
     </p>
-    
-     <p><asp:Label ID="lblEdificio" runat="server" Text="Edificio: "></asp:Label>
-       
-         <asp:DropDownList ID="ddEdificio" runat="server" DataSourceID="dsEdificios" DataTextField="nombre" DataValueField="id">
-         </asp:DropDownList>
-       
+
+    <p>
+        <asp:Label ID="lblEdificio" runat="server" Text="Edificio: "></asp:Label>
+
+        <asp:DropDownList ID="ddEdificio" runat="server" DataSourceID="dsEdificios" DataTextField="nombre" DataValueField="id">
+        </asp:DropDownList>
+
     </p>
     <br />
     <asp:Button ID="cmdAgregar" runat="server" OnClick="Button1_Click" Text="Guardar" />
@@ -67,8 +94,8 @@
             <asp:Parameter Name="fk_profesion" Type="Int32" />
             <asp:Parameter Name="id" Type="Int32" />
         </UpdateParameters>
-</asp:SqlDataSource>
+    </asp:SqlDataSource>
     <asp:SqlDataSource ID="dsProfesiones" runat="server" ConnectionString="<%$ ConnectionStrings:pruebasConnectionString %>" SelectCommand="SELECT * FROM [profesiones]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="dsEdificios" runat="server" ConnectionString="<%$ ConnectionStrings:pruebasConnectionString %>" SelectCommand="SELECT * FROM [edificios]"></asp:SqlDataSource>
-    
+
 </asp:Content>

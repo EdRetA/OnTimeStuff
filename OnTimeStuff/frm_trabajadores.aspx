@@ -8,7 +8,15 @@
 
             <p>
                 <asp:Label ID="lblBuscar" runat="server" Text="Buscar por Identificación: "></asp:Label>
-                <asp:TextBox ID="txtId" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtId" runat="server" MinLength="9" MaxLength="9"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1"
+            ControlToValidate="txtId" runat="server"
+            ErrorMessage="Sólo ingrese números"
+            ValidationExpression="\d+" Font-Bold="True" Font-Size="Small" ForeColor="Red"></asp:RegularExpressionValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator5"
+            ControlToValidate="txtId" runat="server"
+            ErrorMessage="Ingrese 9 dígitos"
+            ValidationExpression="\d{9}" Font-Bold="True" Font-Size="Small" ForeColor="Red"></asp:RegularExpressionValidator>
             </p>
             
             <br />
