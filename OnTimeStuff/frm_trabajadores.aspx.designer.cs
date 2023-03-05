@@ -15,6 +15,15 @@ namespace OnTimeStuff
     {
 
         /// <summary>
+        /// lbltitulo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltitulo;
+
+        /// <summary>
         /// lblBuscar control.
         /// </summary>
         /// <remarks>
@@ -186,6 +195,51 @@ namespace OnTimeStuff
         protected global::System.Web.UI.WebControls.Button cmdEntrada;
 
         /// <summary>
+        /// cmdAscenso control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button cmdAscenso;
+
+        /// <summary>
+        /// lbl_FechaAscenso control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_FechaAscenso;
+
+        /// <summary>
+        /// calAscenso control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar calAscenso;
+
+        /// <summary>
+        /// lblAscensoProfesion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAscensoProfesion;
+
+        /// <summary>
+        /// ddprofesion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddprofesion;
+
+        /// <summary>
         /// dsTrabajador control.
         /// </summary>
         /// <remarks>
@@ -229,5 +283,23 @@ namespace OnTimeStuff
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource dsMarca;
+
+        /// <summary>
+        /// dsPersona control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsPersona;
+
+        /// <summary>
+        /// dsAscensos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsAscensos;
     }
 }

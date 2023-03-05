@@ -23,8 +23,8 @@ namespace OnTimeStuff
                 limpiar();
                 mostrarmensaje("Usuario Ingresado");
             }
-            // catch (SqlException)
-            catch (SqlException ex)
+            
+            catch (SqlException)
             {
                 mostrarmensaje("Ya existe una cédula igual");
             }

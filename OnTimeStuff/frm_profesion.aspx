@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="Ingresar Profesión" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="frm_profesion.aspx.cs" Inherits="OnTimeStuff.frm_profesion" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %>.</h2>
+    <h2><%: Title %></h2>
     
     <p><asp:Label ID="lblNombre" runat="server" Text="Nombre: "></asp:Label>
        <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
     </p>  
-         <p><asp:Label ID="lblsalario" runat="server" Text="Salario: "></asp:Label>
+         <p><asp:Label ID="lblsalario" runat="server" Text="Grado Académico: "></asp:Label>
        
          <asp:DropDownList ID="ddsalario" runat="server" DataSourceID="SqlDataSource1" DataTextField="grado" DataValueField="id">
          </asp:DropDownList>

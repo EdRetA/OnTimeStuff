@@ -11,7 +11,7 @@
             <h2>Agregar Personal</h2>
             <p><a href="frm_trabajador.aspx" class="btn btn-primary btn-lg">Agregar Personal</a></p>
             <h2>Personal</h2>
-            <p><a href="frm_trabajadores.aspx" class="btn btn-primary btn-lg">Personal</a></p>
+            <p><a href="frm_trabajadores.aspx?0" class="btn btn-primary btn-lg">Personal</a></p>
         </div>
         <div class="col-md-4">
             <h2>Profesiones</h2>
@@ -19,7 +19,7 @@
         </div>
         <div class="col-md-4">
             <h2>Promover</h2>
-            <p><a href="Contact.aspx" class="btn btn-primary btn-lg">Promover</a></p>
+            <p><a href="frm_trabajadores.aspx?1" class="btn btn-primary btn-lg">Promover</a></p>
         </div>
     </div>
 

@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Ingresar Nuevo Trabajador"Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="frm_trabajador.aspx.cs" Inherits="OnTimeStuff.frm_trabajador" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %>.</h2>
+    <h2><%: Title %></h2>
     <p><asp:Label ID="lblCedula" runat="server" Text="Cédula: "></asp:Label>
        <asp:TextBox ID="txtCedula" runat="server"></asp:TextBox>
     </p>
@@ -16,7 +16,7 @@
     </p>
      <p><asp:Label ID="lbl_Fechaingreso" runat="server" Text="Fecha de Ingreso: "></asp:Label>
 
-         <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px">
+         <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px" OnClientClick="return false;">
              <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
              <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
              <OtherMonthDayStyle ForeColor="#999999" />

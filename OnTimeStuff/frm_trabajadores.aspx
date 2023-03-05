@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Trabajadores" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="frm_trabajadores.aspx.cs" Inherits="OnTimeStuff.frm_trabajadores" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %>.</h2>
+    <h2><asp:Label ID="lbltitulo" runat="server" Text=""></asp:Label></h2>
 
     <div class="row">
         <div class="col-md-4">
@@ -15,7 +15,7 @@
             <asp:Button ID="cmdBuscar" runat="server" OnClick="cmdBuscar_Click" Text="Buscar" />
 
 
-            <asp:GridView ID="gvTrabajadores" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsProfesiones" OnSelectedIndexChanged="gvTrabajadores_SelectedIndexChanged">
+            <asp:GridView ID="gvTrabajadores" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="dsProfesiones" OnSelectedIndexChanged="gvTrabajadores_SelectedIndexChanged" PageSize="15">
                 <Columns>
                     <asp:BoundField DataField="id" HeaderText="Identificación" ReadOnly="True" SortExpression="id" />
                     <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
@@ -50,19 +50,43 @@
             <p>
                 <asp:Label ID="lblCalendario" runat="server" Text="Fecha de Ingreso: "></asp:Label>
                 <asp:Label ID="lbtCalendario" runat="server" Text=""></asp:Label>
+            </p>
             <p>
                 <asp:Label ID="lblProfesion" runat="server" Text="Profesión: "></asp:Label>
                 <asp:Label ID="lbtProfesion" runat="server" Text=""></asp:Label>
             </p>
-
             <p>
                 <asp:Label ID="lblEdificio" runat="server" Text="Edificio: "></asp:Label>
                 <asp:Label ID="lbtEdificio" runat="server" Text=""></asp:Label>
             </p>
             <p>
             <asp:Button ID="cmdEntrada" runat="server" OnClick="cmdEntrada_Click" Text="Entrada" />
+            <asp:Button ID="cmdAscenso" runat="server" OnClick="cmdAscenso_Click" Text="Ascender" />
             </p>
-            <br />
+            <br/>
+            
+     <p>
+         <asp:Label ID="lbl_FechaAscenso" runat="server" Text="Fecha del Ascenso: "></asp:Label>
+
+         <asp:Calendar ID="calAscenso" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px">
+             <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
+             <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
+             <OtherMonthDayStyle ForeColor="#999999" />
+             <SelectedDayStyle BackColor="#333399" ForeColor="White" />
+             <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
+             <TodayDayStyle BackColor="#CCCCCC" />
+         </asp:Calendar>
+          </p>
+         <br/>
+         <p><asp:Label ID="lblAscensoProfesion" runat="server" Text="Nuevo puesto: "></asp:Label>
+       
+         <asp:DropDownList ID="ddprofesion" runat="server" DataSourceID="dsPuestos" DataTextField="nombre" DataValueField="id">
+         </asp:DropDownList>
+       
+    </p>
+
+    
+
         </div>
     </div>
 
@@ -79,6 +103,34 @@
         <InsertParameters>
             <asp:Parameter Name="fk_empleado" Type="Int32" />         
         </InsertParameters>
+    </asp:SqlDataSource>
+
+    <asp:SqlDataSource ID="dsPersona" runat="server" ConnectionString="<%$ ConnectionStrings:pruebasConnectionString %>" SelectCommand="SELECT [id], [fk_profesion], [FechaIngreso] FROM [empleados] WHERE ([id] = @id)" UpdateCommand="UPDATE [empleados] SET [fk_profesion] = @fk_profesion, [FechaIngreso] = @FechaIngreso WHERE [id] = @id">
+        <InsertParameters>
+            <asp:Parameter Name="id" Type="Int32" />
+            <asp:Parameter Name="fk_profesion" Type="Int32" />
+            <asp:Parameter DbType="Date" Name="FechaIngreso" />
+        </InsertParameters>
+        <SelectParameters>
+            <asp:Parameter Name="id" Type="Int32" />
+        </SelectParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="fk_profesion" Type="Int32" />
+            <asp:Parameter DbType="Date" Name="FechaIngreso" />
+            <asp:Parameter Name="id" Type="Int32" />
+        </UpdateParameters>
+    </asp:SqlDataSource>
+
+    <asp:SqlDataSource ID="dsAscensos" runat="server" ConnectionString="<%$ ConnectionStrings:pruebasConnectionString %>" InsertCommand="INSERT INTO [ascensos] ([fk_empleado], [fk_puestoNuevo], [fk_puestoAnterior], [fecha_ascenso]) VALUES (@fk_empleado, @fk_puestoNuevo, @fk_puestoAnterior, @fecha_ascenso)" >
+                  
+        <InsertParameters>
+            <asp:Parameter Name="fk_empleado" Type="Int32" />
+            <asp:Parameter Name="fk_puestoNuevo" Type="Int32" />
+            <asp:Parameter Name="fk_puestoAnterior" Type="Int32" />
+            <asp:Parameter DbType="Date" Name="fecha_ascenso" />
+        </InsertParameters>                      
+        
+                        
     </asp:SqlDataSource>
 
 </asp:Content>
