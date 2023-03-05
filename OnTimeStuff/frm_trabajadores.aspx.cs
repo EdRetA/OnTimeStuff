@@ -106,21 +106,31 @@ namespace OnTimeStuff
         }
 
         protected void Buscar(string id)
-        {            
+        {
+            desactivar();
             dsTrabajador.SelectParameters[0].DefaultValue = id;
             dsTrabajador.DataBind();
             GridView nuevo = new GridView();
             nuevo.DataSource = dsTrabajador;
             nuevo.DataBind();
-            GridViewRow rowd = nuevo.Rows[0];
-            lbtCedula.Text = rowd.Cells[0].Text;
-            lbtNombre.Text = rowd.Cells[1].Text;
-            lbtApellido1.Text = rowd.Cells[2].Text;
-            lbtApellido2.Text = rowd.Cells[3].Text;
-            lbtCalendario.Text = rowd.Cells[4].Text.Substring(0, (rowd.Cells[4].Text.Length - 12));
-            lbtEdificio.Text = rowd.Cells[5].Text;
-            lbtProfesion.Text = rowd.Cells[6].Text;
-            cmdEntrada.Visible = true;
+            if (nuevo.Rows.Count!=0)
+            {
+                GridViewRow rowd = nuevo.Rows[0];
+                lbtCedula.Text = rowd.Cells[0].Text;
+                lbtNombre.Text = rowd.Cells[1].Text;
+                lbtApellido1.Text = rowd.Cells[2].Text;
+                lbtApellido2.Text = rowd.Cells[3].Text;
+                lbtCalendario.Text = rowd.Cells[4].Text.Substring(0, (rowd.Cells[4].Text.Length - 12));
+                lbtEdificio.Text = rowd.Cells[5].Text;
+                lbtProfesion.Text = rowd.Cells[6].Text;
+                cmdEntrada.Visible = true;
+                activar();
+            }
+            else
+            {
+                mostrarmensaje("El empleado no existe");
+            };
+            
         }
         protected string BuscarPuesto(string id)
         {
@@ -137,8 +147,9 @@ namespace OnTimeStuff
 
         protected void cmdBuscar_Click(object sender, EventArgs e)
         {
+            
             Buscar(txtId.Text);
-            activar();
+            
         }
 
         protected void cmdEntrada_Click(object sender, EventArgs e)
@@ -165,25 +176,35 @@ namespace OnTimeStuff
         protected void cmdAscenso_Click(object sender, EventArgs e)
         {
             empleado Empleado = new empleado();
-            Empleado.Id = int.Parse(lbtCedula.Text);            
-            Empleado.Fecha = calAscenso.SelectedDate;
-            Empleado.Puesto = int.Parse(ddprofesion.SelectedValue);
-                     
+            Empleado.Id = int.Parse(lbtCedula.Text);
 
-            dsAscensos.InsertParameters[0].DefaultValue = Empleado.Id.ToString();
-            dsAscensos.InsertParameters[1].DefaultValue = Empleado.Puesto.ToString();
-            dsAscensos.InsertParameters[2].DefaultValue = BuscarPuesto(Empleado.Id.ToString());
-            dsAscensos.InsertParameters[3].DefaultValue = Empleado.Fecha.ToString();
-
-            dsPersona.UpdateParameters[0].DefaultValue = Empleado.Puesto.ToString();
-            dsPersona.UpdateParameters[1].DefaultValue = Empleado.Fecha.ToString();
-            dsPersona.UpdateParameters[2].DefaultValue = Empleado.Id.ToString();
+            if (DateTime.MinValue.ToString() != calAscenso.SelectedDate.ToString())
+            {
+                Empleado.Fecha = calAscenso.SelectedDate;
+                Empleado.Puesto = int.Parse(ddprofesion.SelectedValue);
 
 
-            dsAscensos.Insert();
-            dsPersona.Update();
-            mostrarmensaje("Ascenso ingresado correctamente");
-            desactivar();
+                dsAscensos.InsertParameters[0].DefaultValue = Empleado.Id.ToString();
+                dsAscensos.InsertParameters[1].DefaultValue = Empleado.Puesto.ToString();
+                dsAscensos.InsertParameters[2].DefaultValue = BuscarPuesto(Empleado.Id.ToString());
+                dsAscensos.InsertParameters[3].DefaultValue = Empleado.Fecha.ToString();
+
+                dsPersona.UpdateParameters[0].DefaultValue = Empleado.Puesto.ToString();
+                dsPersona.UpdateParameters[1].DefaultValue = Empleado.Fecha.ToString();
+                dsPersona.UpdateParameters[2].DefaultValue = Empleado.Id.ToString();
+
+
+                dsAscensos.Insert();
+                dsPersona.Update();
+                mostrarmensaje("Ascenso ingresado correctamente");
+                desactivar();
+            }
+            else
+            {
+                mostrarmensaje("Seleccione una fecha para el Ascenso");
+            }
+
+            
         }
 
         
