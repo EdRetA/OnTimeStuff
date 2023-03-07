@@ -20,7 +20,7 @@
         <asp:RegularExpressionValidator ID="RegularExpressionValidator2"
             ControlToValidate="txtNombre" runat="server"
             ErrorMessage="Sólo ingrese letras"
-            ValidationExpression="^[a-zA-Z]+$" Font-Bold="True" Font-Size="Small" ForeColor="Red"></asp:RegularExpressionValidator>
+            ValidationExpression="^[a-zA-Z\u00C0-\u017F\s]+$" Font-Bold="True" Font-Size="Small" ForeColor="Red"></asp:RegularExpressionValidator>
     </p>
     <p>
         <asp:Label ID="lblApellido1" runat="server" Text="Primer Apellido: "></asp:Label>
@@ -28,7 +28,7 @@
         <asp:RegularExpressionValidator ID="RegularExpressionValidator3"
             ControlToValidate="txtApellido1" runat="server"
             ErrorMessage="Sólo ingrese letras"
-            ValidationExpression="^[a-zA-Z]+$" Font-Bold="True" Font-Size="Small" ForeColor="Red"></asp:RegularExpressionValidator>
+            ValidationExpression="^[a-zA-Z\u00C0-\u017F]+$" Font-Bold="True" Font-Size="Small" ForeColor="Red"></asp:RegularExpressionValidator>
     </p>
     <p>
         <asp:Label ID="lblApellido2" runat="server" Text="Segundo Apellido: "></asp:Label>
@@ -36,7 +36,7 @@
         <asp:RegularExpressionValidator ID="RegularExpressionValidator4"
             ControlToValidate="txtApellido2" runat="server"
             ErrorMessage="Sólo ingrese letras"
-            ValidationExpression="^[a-zA-Z]+$" Font-Bold="True" Font-Size="Small" ForeColor="Red"></asp:RegularExpressionValidator>
+            ValidationExpression="^[a-zA-Z\u00C0-\u017F]+$" Font-Bold="True" Font-Size="Small" ForeColor="Red"></asp:RegularExpressionValidator>
     </p>
     <p>
         <asp:Label ID="lbl_Fechaingreso" runat="server" Text="Fecha de Ingreso: "></asp:Label>

@@ -5,7 +5,7 @@
     
     <p><asp:Label ID="lblNombre" runat="server" Text="Nombre: "></asp:Label>
        <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtNombre" ErrorMessage="Sólo ingrese letras" ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtNombre" ErrorMessage="Sólo ingrese letras" ValidationExpression="^[a-zA-Z\u00C0-\u017F\s]+$"></asp:RegularExpressionValidator>
     </p>  
          <p><asp:Label ID="lblsalario" runat="server" Text="Grado Académico: "></asp:Label>
        
